@@ -1,0 +1,189 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans',
+     'Lucida Sans Regular',
+     'Lucida Grande',
+      'Lucida Sans Unicode', 
+      Geneva,
+      Verdana, sans-serif;
+}
+.portal #google-sinin img
+{
+    width: 15px;
+}
+.portal .input-field img
+{
+    width: 20px;
+}
+.portal
+{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+.portal form
+{
+    background: var(--bg-light);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: min(100%, 470px);
+    padding: 70px;
+    display: grid;
+    gap: 1rem;
+}
+.title h1
+{
+    font-size: 2rem;
+    position: relative;
+    padding-left: 35px;
+
+}
+.title h1::before, .title h1::after
+{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: royalblue;
+    right: 445px;
+    top: 9px;
+    border-bottom-right-radius: 0rem; /* 16px */
+    border-bottom-left-radius: 1rem; /* 16px */
+    transform: rotate(104deg);
+}
+.title h1::after
+{
+    animation: pulse 1.2s infinite;
+}
+@keyframes pulse
+{
+    0%
+    {
+        opacity: 0;
+        transform: scale(1.0);
+    }
+    50%
+    {
+        opacity: 0;
+        transform: scale(1.50);
+    }
+    50%
+    {
+        transform: scale(1.75);
+    }
+}
+.title p
+{
+    color: grey;
+    font-size: .9rem;
+    
+}
+input, button
+{
+    font: inherit;
+    border: 2px solid transparent;
+    outline: 2px solid transparent;
+    border-radius: 5px;
+}
+#google-sinin
+{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px
+    ;
+    cursor: pointer;
+}
+span
+{
+    color: grey;
+    display: flex;
+
+}
+span::before, span::after
+{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: grey;
+    margin: auto;
+}
+span::before
+{
+    margin-right: 1rem;
+}
+span::after
+{
+    margin-left: 1rem;
+}
+.input-field 
+{
+    position: relative;
+}
+.input-field input
+{
+    background: transparent;
+    border: 2px solid rgba(128, 128, 128, 0.452);
+    padding: 23px 0px 7px;
+    width: 100%;
+    padding-left: 15px;
+}
+.input-field label
+{
+    position: absolute;
+    color: gray;
+    left: 15px;
+    top: 16px;
+}
+.input-field input:focus ~ label, .input-field input:not(:placeholder-shown) ~ label
+{
+    font-size: .85rem;
+    
+
+}
+.input-field input:focus{
+    border: 1px solid royalblue;
+}
+.input-field input:focus ~ label{
+    color: royalblue;
+    top: -10px;
+    background: #F8F8F8;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: all 0.5s;
+}
+#show-hide-pass
+{
+    position: absolute;
+    top: 16px;
+    right: 15px;
+}
+#forgot-pass
+{
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: end;
+    color: rgb(30, 90, 255);
+}
+#signin
+{
+    background: dodgerblue;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+#signup
+{
+    font-size: .9rem;
+    text-align: center;
+    color: grey;
+    
+}
+#signup a{
+    text-decoration: none;
+    color: rgb(30, 90, 255);
+    }
